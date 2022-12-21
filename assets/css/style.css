@@ -86,13 +86,13 @@ body {
     display: none;
 }
 
-.reel{
+.reel {
     transition: 0.3s;
 }
 
 .reel:hover {
     transform: scale(1.02);
-    filter: brightness(150%);
+    filter: sepia(100%);
 }
 
 .zoomPortada {
@@ -158,12 +158,7 @@ video {
     justify-content: space-evenly;
     margin-bottom: 200px;
 }
-/*
-.fotosInicio {
-    width: 900px;
-    margin: 20px;
-}
-*/
+
 
 @keyframes mover6 {
     0% {
@@ -197,23 +192,25 @@ video {
 }
 
 @media (max-width:576px) {
-    .bodyInicio{
+    .bodyInicio {
         grid-template-columns: 1fr;
         grid-template-rows: 90px 1fr 250px;
-        grid-template-areas: 
-        "header"
-        "main"
-        "footer";
-    }
-    .textoInicio {
-       font-size: 40px;
-       margin: 60px;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
     }
 
-    .portada{
+    .textoInicio {
+        font-size: 40px;
+        margin: 60px;
+    }
+
+    .portada {
         display: none;
     }
-    .portada2{
+
+    .portada2 {
         display: block;
     }
 
@@ -338,7 +335,7 @@ video {
         padding: 0;
     }
 
-    .sobreMiTitulo{
+    .sobreMiTitulo {
         margin-top: 40px;
     }
 
@@ -539,12 +536,12 @@ video {
     object-fit: cover;
 }
 
-.videosyt{
+.videosyt {
     transition: 0.5s;
 }
 
-.videosyt:hover{
-    
+.videosyt:hover {
+
     filter: brightness(150%);
 }
 
@@ -580,6 +577,102 @@ video {
     animation-name: opacityMain;
     animation-duration: 2s;
 }
+
+/*CONTACTO*/
+.form {
+    color: antiquewhite;
+    font-family: Montserrat;
+    border: solid 3px;
+    border-radius: 30px;
+    border-color: #e1bef3;
+    animation-name: mover7;
+    animation-duration: 1s;
+}
+
+.tituloForm {
+    font-weight: 700;
+
+}
+
+.cajaContacto {
+    animation-name: mover8;
+    animation-duration: 1s;
+}
+
+.cajaInfoContacto {
+    background-color: #e1bef3;
+}
+
+.tituloInfo {
+    color: #0A000A;
+    font-size: 30px;
+    font-family: Montserrat;
+    font-weight: 700;
+}
+
+.info1 {
+    color: #0A000A;
+    font-size: 20px;
+    font-family: Montserrat;
+    font-weight: 400;
+}
+
+.info2 {
+    color: #0A000A;
+    font-size: 20px;
+    font-family: Montserrat;
+    font-weight: 400;
+}
+
+.info3 {
+    color: #0A000A;
+    font-size: 20px;
+    font-family: Montserrat;
+    font-weight: 400;
+}
+
+.btn {
+    border: none;
+    background-color: #e1bef3;
+    color: black;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+@keyframes mover7 {
+    0% {
+        transform: translate(-100%, 0);
+        opacity: 0;
+    }
+
+    5% {
+        transform: translate(-100%, 0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        opacity: 100%;
+    }
+}
+
+@keyframes mover8 {
+    0% {
+        transform: translate(100%, 0);
+        opacity: 0;
+    }
+
+    20% {
+        transform: translate(100%, 0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        opacity: 100%;
+    }
+}
+
 
 /*FOOTER*/
 .whatsapp {
