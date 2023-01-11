@@ -1,0 +1,69 @@
+main{
+    div{
+        .tarjetas{
+            width: 500px;
+            border: 3px solid $colorUno;
+            border-radius: 20px;
+            .tituloTarjetas {
+                font-family: Montserrat;
+                font-weight: 700;
+                font-size: 40px;
+                color: $colorDos;
+              } 
+            .pTarjetas {
+                font-family: Montserrat;
+                font-weight: 300;
+                font-size: 22px;
+                color: $colorDos;
+              }             
+        }
+        .tarjeta-1 {
+            animation-name: mover;
+            animation-duration: 1s;
+          }
+          
+        .tarjeta-2 {
+            animation-name: mover2;
+            animation-duration: 1s;
+          }
+    }   
+}
+
+  @keyframes mover {
+    0% {
+      transform: translate(-100%, 0);
+      opacity: 0;
+    }
+    20% {
+      transform: translate(-100%, 0);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0, 0);
+      opacity: 100%;
+    }
+  }
+  @keyframes mover2 {
+    0% {
+      transform: translate(-100%, 0);
+      opacity: 0;
+    }
+    30% {
+      transform: translate(100%, 0);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0, 0);
+      opacity: 100%;
+    }
+  }
+  @keyframes mover3 {
+    0% {
+      transform: translate(0, -50%);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0, 0);
+      opacity: 100%;
+    }
+  }

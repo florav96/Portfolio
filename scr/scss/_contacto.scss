@@ -1,0 +1,86 @@
+main{
+    .form {
+        color: $colorDos;
+        font-family: Montserrat;
+        border: solid 3px;
+        border-radius: 30px;
+        border-color: $colorUno;
+        animation-name: mover7;
+        animation-duration: 1s;
+        div{
+            .tituloForm {
+                font-weight: 700;
+              }
+        }     
+    .btn {
+        border: none;
+        background-color: $colorUno;
+        color: black;
+        font-size: 20px;
+        font-weight: 800;
+        }
+      }
+    .cajaContacto {
+        animation-name: mover8;
+        animation-duration: 1s;
+        .cajaInfoContacto {
+            background-color: $colorUno;
+            .tituloInfo {
+                color: $colorTres;
+                font-size: 30px;
+                font-family: Montserrat;
+                font-weight: 700;
+              }
+            .info1 {
+                color: $colorTres;
+                font-size: 20px;
+                font-family: Montserrat;
+                font-weight: 400;
+              }
+              
+            .info2 {
+                color: $colorTres;
+                font-size: 20px;
+                font-family: Montserrat;
+                font-weight: 400;
+              }
+              
+            .info3 {
+                color: $colorTres;
+                font-size: 20px;
+                font-family: Montserrat;
+                font-weight: 400;
+              }
+          }
+        
+      }
+      
+      @keyframes mover7 {
+        0% {
+          transform: translate(-100%, 0);
+          opacity: 0;
+        }
+        5% {
+          transform: translate(-100%, 0);
+          opacity: 0;
+        }
+        100% {
+          transform: translate(0, 0);
+          opacity: 100%;
+        }
+      }
+      @keyframes mover8 {
+        0% {
+          transform: translate(100%, 0);
+          opacity: 0;
+        }
+        20% {
+          transform: translate(100%, 0);
+          opacity: 0;
+        }
+        100% {
+          transform: translate(0, 0);
+          opacity: 100%;
+        }
+    }
+}

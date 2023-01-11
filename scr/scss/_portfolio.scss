@@ -1,0 +1,107 @@
+.navPorfolio {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+.mainPortfolio{
+    animation-name: opacityMain;
+    animation-duration: 2s;
+    .cajaSTPorfolio {
+        background-color: $colorUno;
+        color: $colorTres;
+        border: 10px solid $colorTres;
+        .STPorfolio {
+            font-family: Montserrat;
+            font-weight: 700;
+            font-size: 50px;
+          }  
+      }
+      .zoomImg {
+        overflow: hidden;
+        .bookPicture{
+            .bookImg{
+                &:hover{
+                    transform: scale(1.05);
+                    opacity: 80%;
+                    transition: 0.5s;
+                }
+            }
+        }
+      }
+    .light-box {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.5);
+        transition: transform 0.2s ease-in-out;
+        width: 100%;
+        height: 105vh;
+        z-index: 1000;
+        transform: scale(0);
+        &:target{
+            transform: scale(1);
+        }
+        div{
+            .close {
+                display: block;
+                color: $colorUno;
+                text-decoration: none;
+                font-family: Montserrat;
+                font-weight: 900;
+                font-size: 30px;
+                background-color: $colorCuatro;
+                text-align: center;
+                line-height: 50px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+              }
+        }
+        div{
+            .next {
+                display: block;
+                background-color: $colorCuatro;
+                color: $colorUno;
+                height: 45px;
+                width: 45px;
+                font-size: 25px;
+                line-height: 40px;
+                text-decoration: none;
+                text-align: center;
+              }
+              .imgB {
+                width: 32vw;
+                max-height: 100vh;
+                object-fit: cover;
+              }       
+        }
+      }
+    .audiovisuales{
+        .videosyt {
+            transition: 0.5s;
+            &:hover{
+                filter: brightness(150%);
+            }
+          }
+    }
+    .trabajosmkt{
+         
+         .tMkt {
+             transition: 0.5s;
+             &:hover{
+                transform: scale(1.05);
+                filter: brightness(150%);
+             }
+          }
+    }
+}
+  
+  @keyframes opacityMain {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }

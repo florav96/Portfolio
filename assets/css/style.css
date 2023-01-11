@@ -1,745 +1,524 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: #0A000A;
+  background-color: #0A000A;
 }
 
-/*NAVEGADOR BS*/
+.titulosPrincipales {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 7vh;
+  color: antiquewhite;
+  text-align: center;
+  margin: 70px;
+  animation-name: mover3;
+  animation-duration: 1s;
+}
 
 .navbar {
-    background-color: #63025c !important;
+  background-color: #63025c !important;
+}
+.navbar .nav-item:hover {
+  background: #0A000A;
+}
+.navbar .nav-item .nav-link {
+  color: #e1bef3 !important;
+  font-family: Montserrat !important;
+  font-weight: 100;
+  font-size: 20px;
+  margin-left: 20px;
+}
+.navbar .nav-item .dropdown-menu {
+  background-color: #63025c !important;
+}
+.navbar .nav-item .dropdown-menu .dropdown-item {
+  color: #e1bef3 !important;
+  font-family: Montserrat !important;
+  font-weight: 100;
+  font-size: 20px;
+  margin: 10px 20px 10px 20px;
+}
+.navbar .nav-item .dropdown-menu .dropdown-item:hover {
+  background: #0A000A;
+}
+.navbar .imgFlorav {
+  width: 180px;
 }
 
-.nav-link {
-    color: #e1bef3 !important;
-    font-family: Montserrat !important;
-    font-weight: 100;
-    font-size: 20px;
-    margin-left: 20px;
-}
-
-.nav-item:hover {
-    background: #3a012f;
-}
-
-.dropdown-menu {
-    background-color: #63025c !important;
-
-}
-
-.dropdown-item {
-    color: #e1bef3 !important;
-    font-family: Montserrat !important;
-    font-weight: 100;
-    font-size: 20px;
-    margin: 10px 20px 10px 20px;
-}
-
-.dropdown-item:hover {
-    background: #3a012f;
-}
-
-.imgFlorav {
-    width: 180px;
-}
-
-
-/*INICIO*/
 .bodyInicio {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 54px 1fr 250px;
-    grid-template-areas:
-        "header header header header"
-        "main   main   main   main"
-        "footer footer footer footer";
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 54px 1fr 250px;
+  grid-template-areas: "header header header header" "main   main   main   main" "footer footer footer footer";
 }
-
-.headerInicio {
-    grid-area: header;
+.bodyInicio .headerInicio {
+  grid-area: header;
 }
-
-.mainInicio {
-    grid-area: main;
+.bodyInicio .mainInicio {
+  grid-area: main;
 }
-
-.footerInicio {
-    grid-area: footer;
+.bodyInicio .mainInicio .portada {
+  width: 100%;
+  animation-name: mover6;
+  animation-duration: 1s;
 }
-
-.portada {
-    animation-name: mover6;
-    animation-duration: 1s;
+.bodyInicio .mainInicio .portada2 {
+  display: none;
 }
-
-.portada2 {
-    display: none;
+.bodyInicio .mainInicio .reel {
+  width: 100%;
+  transition: 0.3s;
 }
-
-.reel {
-    transition: 0.3s;
+.bodyInicio .mainInicio .reel:hover {
+  transform: scale(1.02);
+  filter: sepia(100%);
 }
-
-.reel:hover {
-    transform: scale(1.02);
-    filter: sepia(100%);
+.bodyInicio .mainInicio .cajaTextoInicio {
+  width: 100%;
 }
-
-.zoomPortada {
-    overflow: hidden;
+.bodyInicio .mainInicio .cajaTextoInicio .textoInicio {
+  color: antiquewhite;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 70px;
+  text-align: center;
+  margin: 200px;
+  font-family: Montserrat;
 }
-
-img {
-    width: 100%;
+.bodyInicio .footerInicio {
+  grid-area: footer;
 }
-
-.imagenes {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    row-gap: 30px;
-    margin-bottom: 150px;
-}
-
-.subtitulosInicio {
-    color: beige;
-    font-size: 100px;
-    font-family: Montserrat;
-    font-weight: 800;
-    font-style: italic;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    background-color: #0a000a33;
-    text-align: center;
-    padding: 10px;
-}
-
-.imagen1 {
-    width: 900px;
-    position: relative;
-}
-
-.imagen2 {
-    width: 900px;
-}
-
-.imagen3 {
-    width: 900px;
-}
-
-.imagen4 {
-    width: 900px;
-}
-
-video {
-    width: 100%;
-}
-
-.cajaTextoInicio {
-    width: 100%;
-
-}
-
-.cajaFotosInicio {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-bottom: 200px;
-}
-
 
 @keyframes mover6 {
-    0% {
-        transform: translate(0, -10%);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translate(0, 0);
-        opacity: 100%;
-    }
+  0% {
+    transform: translate(0, -10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 100%;
+  }
 }
-
-.textoInicio {
-    color: blanchedalmond;
-    font-family: Montserrat;
-    font-weight: 700;
-    font-size: 70px;
-    text-align: center;
-    margin: 200px;
-    font-family: Montserrat;
-}
-
-.subtitulosTexto {
-    color: beige;
-    font-size: 100px;
-    text-align: center;
-    font-family: Montserrat;
-    font-weight: 800;
-    font-style: italic;
-}
-
-@media (max-width:576px) {
-    .bodyInicio {
-        grid-template-columns: 1fr;
-        grid-template-rows: 90px 1fr 250px;
-        grid-template-areas:
-            "header"
-            "main"
-            "footer";
-    }
-
-    .textoInicio {
-        font-size: 40px;
-        margin: 60px;
-    }
-
-    .portada {
-        display: none;
-    }
-
-    .portada2 {
-        display: block;
-    }
-
-    .cajaFotosInicio {
-        flex-wrap: column;
-        justify-content: space-evenly;
-        margin-bottom: 100px;
-    }
-}
-
-/*SOBRE MI*/
-.bodySobreMi {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 54px 1fr 250px;
-    grid-template-areas:
-        "header header header header"
-        "main   main   main   main"
-        "footer footer footer footer"
-}
-
-.sobreMiTitulo {
-    font-family: Montserrat;
-    font-weight: 700;
-    font-size: 70px;
-    color: blanchedalmond;
-    text-align: center;
-    margin: 70px;
-    animation-name: mover3;
-    animation-duration: 1s;
-}
-
-.headerSobreMi {
+@media (max-width: 576px) {
+  .bodyInicio {
+    grid-template-columns: 1fr;
+    grid-template-rows: 90px 1fr 250px;
+    grid-template-areas: "header" "main" "footer";
+  }
+  .bodyInicio .headerInicio {
     grid-area: header;
-}
-
-.mainSobreMi {
+  }
+  .bodyInicio .mainInicio {
     grid-area: main;
+  }
+  .bodyInicio .mainInicio .portada {
+    display: none;
+  }
+  .bodyInicio .mainInicio .portada2 {
+    display: block;
+  }
+  .bodyInicio .mainInicio .cajaTextoInicio .textoInicio {
+    font-size: 100px;
+    margin: 100px;
+  }
+  .bodyInicio .footerInicio {
+    grid-area: footer;
+  }
 }
-
-.cajaBio {
-    background-color: #63025c;
-    width: 1500px;
-    padding: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 0px auto;
-    animation-name: mover4;
-    animation-duration: 2s;
+.bodySobreMi {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 54px 1fr 250px;
+  grid-template-areas: "header header header header" "main   main   main   main" "footer footer footer footer";
 }
-
-.fotoMia {
-    width: 550px;
-    border: solid 50px;
-    border-color: #bf8bda;
-    object-fit: cover;
+.bodySobreMi .headerSobreMi {
+  grid-area: header;
 }
-
-.cajaBio p {
-    color: antiquewhite;
-    font-size: 25px;
-    font-family: Montserrat;
-    line-height: 40px;
-    text-align: justify;
+.bodySobreMi .mainSobreMi {
+  grid-area: main;
 }
-
-.p1 {
-    margin-bottom: 20px;
+.bodySobreMi .mainSobreMi .cajaBio {
+  background-color: #63025c;
+  width: 1500px;
+  padding: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0px auto;
+  animation-name: mover4;
+  animation-duration: 2s;
 }
-
-.p2 {
-    margin-bottom: 20px;
+.bodySobreMi .mainSobreMi .cajaBio .fotoMia {
+  width: 550px;
+  border: solid 50px;
+  border-color: #e1bef3;
+  object-fit: cover;
 }
-
-.textoBio {
-    margin-left: 50px;
+.bodySobreMi .mainSobreMi .cajaBio .textoBio {
+  margin-left: 50px;
+}
+.bodySobreMi .mainSobreMi .cajaBio .textoBio p {
+  color: antiquewhite;
+  font-size: 25px;
+  font-family: Montserrat;
+  line-height: 40px;
+  text-align: justify;
+  margin-bottom: 20px;
 }
 
 @keyframes mover4 {
-
-    0% {
-        transform: translate(-100%, 0);
-        opacity: 0;
-    }
-
-
-    5% {
-        transform: translate(-100%, 0);
-        opacity: 0;
-    }
-
-
-    100% {
-        transform: translate(0, 0);
-        opacity: 100%;
-    }
+  0% {
+    transform: translate(-100%, 0);
+    opacity: 0;
+  }
+  5% {
+    transform: translate(-100%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 100%;
+  }
 }
-
-@media(max-width: 576px) {
-    .bodySobreMi {
-        grid-template-columns: 1fr;
-        grid-template-rows: 90px 1fr 250px;
-        grid-template-areas:
-            "header"
-            "main"
-            "footer";
-    }
-
-    .mainSobreMi {
-        justify-content: center;
-        padding: 0;
-    }
-
-    .cajaBio {
-        width: 430px;
-        max-height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-    }
-
-    .sobreMiTitulo {
-        margin-top: 40px;
-    }
-
-    .fotoMia {
-        width: 350px;
-        margin-top: 40px;
-    }
-
-    .p1 {
-        margin: 40px 40px 20px 40px;
-    }
-
-    .p2 {
-        margin: 0px 40px 20px 40px;
-    }
-
-    .p3 {
-        margin: 0px 40px 40px 40px;
-    }
-
-    .cajaBio p {
-        font-size: 15px;
-        line-height: 30px;
-    }
-
-    .textoBio {
-        margin-left: 0px;
-    }
-}
-
-
-/*SERVICIOS*/
-.tituloServicios {
-    font-family: Montserrat;
-    font-weight: 700;
-    font-size: 70px;
-    color: blanchedalmond;
-    animation-name: mover3;
-    animation-duration: 1s;
-}
-
-.tituloTarjetas {
-    font-family: Montserrat;
-    font-weight: 700;
-    font-size: 40px;
-    color: blanchedalmond;
-}
-
-.pTarjetas {
-    font-family: Montserrat;
-    font-weight: 300;
-    font-size: 20px;
-    color: blanchedalmond;
-}
-
-.tarjetas {
-    width: 500px;
-    border: 3px solid violet;
-    border-radius: 20px;
-}
-
-.tarjeta-1 {
-    animation-name: mover;
-    animation-duration: 1s;
-}
-
-.tarjeta-2 {
-    animation-name: mover2;
-    animation-duration: 1s;
-}
-
-
-@keyframes mover {
-
-    0% {
-        transform: translate(-100%, 0);
-        opacity: 0;
-    }
-
-    20% {
-        transform: translate(-100%, 0);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translate(0, 0);
-        opacity: 100%;
-    }
-}
-
-@keyframes mover2 {
-    0% {
-        transform: translate(-100%, 0);
-        opacity: 0;
-    }
-
-    30% {
-        transform: translate(100%, 0);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translate(0, 0);
-        opacity: 100%;
-    }
-}
-
-@keyframes mover3 {
-    0% {
-        transform: translate(0, -50%);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translate(0, 0);
-        opacity: 100%;
-    }
-}
-
-/*PORTFOLIO*/
-
-.navPorfolio {
-    background-color: #63025c;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-}
-
-.cajaSTPorfolio {
-    background-color: #bf8bda;
-    color: #2c0129;
-    border: 10px solid #2c0129;
-}
-
-.STPorfolio {
-    font-family: Montserrat;
-    font-weight: 700;
-    font-size: 50px;
-}
-
-.zoomImg {
-    overflow: hidden;
-}
-
-.bookImg:hover {
-    transform: scale(1.05);
-    opacity: 80%;
-    transition: 0.5s;
-}
-
-.light-box {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, .5);
-    transition: transform 0.2s ease-in-out;
-    width: 100%;
-    height: 105vh;
-    z-index: 1000;
-    transform: scale(0);
-}
-
-.light-box:target {
-    transform: scale(1);
-}
-
-.close {
-    display: block;
-    color: #bf8bda;
-    text-decoration: none;
-    font-family: Montserrat;
-    font-weight: 900;
-    font-size: 30px;
-    background-color: #63025c;
-    text-align: center;
-    line-height: 50px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
-.next {
-    display: block;
-    background-color: #63025c;
-    color: #bf8bda;
-    height: 45px;
-    width: 45px;
-    font-size: 25px;
-    line-height: 40px;
-    text-decoration: none;
-    text-align: center;
-}
-
-.imgB {
-    width: 32vw;
-    max-height: 100vh;
-    object-fit: cover;
-}
-
-.videosyt {
-    transition: 0.5s;
-}
-
-.videosyt:hover {
-
-    filter: brightness(150%);
-}
-
-.tMkt1 {
-    transition: 0.5s;
-}
-
-.tMkt1:hover {
-    transform: scale(1.05);
-    filter: brightness(150%);
-}
-
-.tMkt2 {
-    transition: 0.5s;
-}
-
-.tMkt2:hover {
-    transform: scale(1.05);
-    filter: brightness(120%);
-}
-
-@keyframes opacityMain {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 100%;
-    }
-}
-
-.mainPortfolio {
-    animation-name: opacityMain;
-    animation-duration: 2s;
-}
-
-/*CONTACTO*/
-.form {
-    color: antiquewhite;
-    font-family: Montserrat;
-    border: solid 3px;
-    border-radius: 30px;
-    border-color: #e1bef3;
-    animation-name: mover7;
-    animation-duration: 1s;
-}
-
-.tituloForm {
-    font-weight: 700;
-
-}
-
-.cajaContacto {
-    animation-name: mover8;
-    animation-duration: 1s;
-}
-
-.cajaInfoContacto {
-    background-color: #e1bef3;
-}
-
-.tituloInfo {
-    color: #0A000A;
-    font-size: 30px;
-    font-family: Montserrat;
-    font-weight: 700;
-}
-
-.info1 {
-    color: #0A000A;
-    font-size: 20px;
-    font-family: Montserrat;
-    font-weight: 400;
-}
-
-.info2 {
-    color: #0A000A;
-    font-size: 20px;
-    font-family: Montserrat;
-    font-weight: 400;
-}
-
-.info3 {
-    color: #0A000A;
-    font-size: 20px;
-    font-family: Montserrat;
-    font-weight: 400;
-}
-
-.btn {
-    border: none;
-    background-color: #e1bef3;
-    color: black;
-    font-size: 20px;
-    font-weight: 800;
-}
-
-@keyframes mover7 {
-    0% {
-        transform: translate(-100%, 0);
-        opacity: 0;
-    }
-
-    5% {
-        transform: translate(-100%, 0);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translate(0, 0);
-        opacity: 100%;
-    }
-}
-
-@keyframes mover8 {
-    0% {
-        transform: translate(100%, 0);
-        opacity: 0;
-    }
-
-    20% {
-        transform: translate(100%, 0);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translate(0, 0);
-        opacity: 100%;
-    }
-}
-
-
-/*FOOTER*/
-.whatsapp {
-    width: 50px;
-    transition: 0.1s;
-}
-
-.instagram {
-    width: 50px;
-    transition: 0.1s;
-}
-
-.linkedin {
-    width: 50px;
-    transition: 0.1s;
-}
-
-.whatsapp:hover {
-    width: 60px;
-}
-
-.instagram:hover {
-    width: 60px;
-}
-
-.linkedin:hover {
-    width: 60px;
-}
-
-.textoDerechos {
-    font-family: Montserrat;
-    font-weight: 100;
-    font-size: 15px;
-    color: #e1bef3;
-    ;
-}
-
-/*FOOTER FLEX CSS*/
-
-.footerCSS {
-    width: 100%;
-    height: 100px;
-    margin: 80px 0px 40px 0px;
-    grid-area: footer;
-}
-
-.divFooterCSS {
+@media (max-width: 576px) {
+  .bodySobreMi {
+    grid-template-columns: 1fr;
+    grid-template-rows: 90px 1fr 250px;
+    grid-template-areas: "header" "main" "footer";
+  }
+  .bodySobreMi .mainSobreMi {
+    justify-content: center;
+    padding: 0;
+  }
+  .bodySobreMi .mainSobreMi .sobreMiTitulo {
+    margin-top: 40px;
+  }
+  .bodySobreMi .mainSobreMi .cajaBio {
+    width: 430px;
+    max-height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.textoDerechosCSS {
-    color: #e1bef3;
-    font-style: italic;
+    padding: 0;
+  }
+  .bodySobreMi .mainSobreMi .cajaBio .fotoMia {
+    width: 350px;
+    margin-top: 40px;
+  }
+  .bodySobreMi .mainSobreMi .cajaBio .textoBio {
+    margin-left: 0px;
+  }
+  .bodySobreMi .mainSobreMi .cajaBio .textoBio p {
     font-size: 15px;
-    font-family: Montserrat;
-    font-weight: 300;
-    text-align: center;
-    margin: auto 0px;
-    padding-bottom: 20px;
+    line-height: 30px;
+  }
+  .bodySobreMi .mainSobreMi .cajaBio .textoBio .p1 {
+    margin: 40px 40px 20px 40px;
+  }
+  .bodySobreMi .mainSobreMi .cajaBio .textoBio .p2 {
+    margin: 0px 40px 20px 40px;
+  }
+  .bodySobreMi .mainSobreMi .cajaBio .textoBio .p3 {
+    margin: 0px 40px 40px 40px;
+  }
+}
+main div .tarjetas {
+  width: 500px;
+  border: 3px solid #e1bef3;
+  border-radius: 20px;
+}
+main div .tarjetas .tituloTarjetas {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 40px;
+  color: antiquewhite;
+}
+main div .tarjetas .pTarjetas {
+  font-family: Montserrat;
+  font-weight: 300;
+  font-size: 22px;
+  color: antiquewhite;
+}
+main div .tarjeta-1 {
+  animation-name: mover;
+  animation-duration: 1s;
+}
+main div .tarjeta-2 {
+  animation-name: mover2;
+  animation-duration: 1s;
 }
 
-.divRedeSocialesCSS {
-    display: flex;
-    flex-direction: row;
-    width: 10%;
-    justify-content: space-evenly;
+@keyframes mover {
+  0% {
+    transform: translate(-100%, 0);
+    opacity: 0;
+  }
+  20% {
+    transform: translate(-100%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 100%;
+  }
+}
+@keyframes mover2 {
+  0% {
+    transform: translate(-100%, 0);
+    opacity: 0;
+  }
+  30% {
+    transform: translate(100%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 100%;
+  }
+}
+@keyframes mover3 {
+  0% {
+    transform: translate(0, -50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 100%;
+  }
+}
+.navPorfolio {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.mainPortfolio {
+  animation-name: opacityMain;
+  animation-duration: 2s;
+}
+.mainPortfolio .cajaSTPorfolio {
+  background-color: #e1bef3;
+  color: #0A000A;
+  border: 10px solid #0A000A;
+}
+.mainPortfolio .cajaSTPorfolio .STPorfolio {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 50px;
+}
+.mainPortfolio .zoomImg {
+  overflow: hidden;
+}
+.mainPortfolio .zoomImg .bookPicture .bookImg:hover {
+  transform: scale(1.05);
+  opacity: 80%;
+  transition: 0.5s;
+}
+.mainPortfolio .light-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease-in-out;
+  width: 100%;
+  height: 105vh;
+  z-index: 1000;
+  transform: scale(0);
+}
+.mainPortfolio .light-box:target {
+  transform: scale(1);
+}
+.mainPortfolio .light-box div .close {
+  display: block;
+  color: #e1bef3;
+  text-decoration: none;
+  font-family: Montserrat;
+  font-weight: 900;
+  font-size: 30px;
+  background-color: #63025c;
+  text-align: center;
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.mainPortfolio .light-box div .next {
+  display: block;
+  background-color: #63025c;
+  color: #e1bef3;
+  height: 45px;
+  width: 45px;
+  font-size: 25px;
+  line-height: 40px;
+  text-decoration: none;
+  text-align: center;
+}
+.mainPortfolio .light-box div .imgB {
+  width: 32vw;
+  max-height: 100vh;
+  object-fit: cover;
+}
+.mainPortfolio .audiovisuales .videosyt {
+  transition: 0.5s;
+}
+.mainPortfolio .audiovisuales .videosyt:hover {
+  filter: brightness(150%);
+}
+.mainPortfolio .trabajosmkt .tMkt {
+  transition: 0.5s;
+}
+.mainPortfolio .trabajosmkt .tMkt:hover {
+  transform: scale(1.05);
+  filter: brightness(150%);
+}
+
+@keyframes opacityMain {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+main .form {
+  color: antiquewhite;
+  font-family: Montserrat;
+  border: solid 3px;
+  border-radius: 30px;
+  border-color: #e1bef3;
+  animation-name: mover7;
+  animation-duration: 1s;
+}
+main .form div .tituloForm {
+  font-weight: 700;
+}
+main .form .btn {
+  border: none;
+  background-color: #e1bef3;
+  color: black;
+  font-size: 20px;
+  font-weight: 800;
+}
+main .cajaContacto {
+  animation-name: mover8;
+  animation-duration: 1s;
+}
+main .cajaContacto .cajaInfoContacto {
+  background-color: #e1bef3;
+}
+main .cajaContacto .cajaInfoContacto .tituloInfo {
+  color: #0A000A;
+  font-size: 30px;
+  font-family: Montserrat;
+  font-weight: 700;
+}
+main .cajaContacto .cajaInfoContacto .info1 {
+  color: #0A000A;
+  font-size: 20px;
+  font-family: Montserrat;
+  font-weight: 400;
+}
+main .cajaContacto .cajaInfoContacto .info2 {
+  color: #0A000A;
+  font-size: 20px;
+  font-family: Montserrat;
+  font-weight: 400;
+}
+main .cajaContacto .cajaInfoContacto .info3 {
+  color: #0A000A;
+  font-size: 20px;
+  font-family: Montserrat;
+  font-weight: 400;
+}
+@keyframes mover7 {
+  0% {
+    transform: translate(-100%, 0);
+    opacity: 0;
+  }
+  5% {
+    transform: translate(-100%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 100%;
+  }
+}
+@keyframes mover8 {
+  0% {
+    transform: translate(100%, 0);
+    opacity: 0;
+  }
+  20% {
+    transform: translate(100%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 100%;
+  }
+}
+
+.footerCSS {
+  width: 100%;
+  height: 100px;
+  margin: 80px 0px 0px 0px;
+  grid-area: footer;
+}
+.footerCSS .divFooterCSS {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footerCSS .divFooterCSS .textoDerechosCSS {
+  color: #e1bef3;
+  font-style: italic;
+  font-size: 15px;
+  font-family: Montserrat;
+  font-weight: 300;
+  text-align: center;
+  margin: auto 0px;
+  padding-bottom: 20px;
+}
+.footerCSS .divFooterCSS .divRedeSocialesCSS {
+  display: flex;
+  flex-direction: row;
+  width: 10.5%;
+  justify-content: space-around;
+}
+.footerCSS .divFooterCSS .divRedeSocialesCSS .redes {
+  width: 50px;
+  transition: 0.1s;
+}
+.footerCSS .divFooterCSS .divRedeSocialesCSS .redes:hover {
+  width: 60px;
+}
+
+.footerBS div div .textoDerechos2 {
+  color: #e1bef3;
+  font-style: italic;
+  font-size: 15px;
+  font-family: Montserrat;
+  font-weight: 300;
+  text-align: center;
+  margin: auto 0px;
+  padding-bottom: 20px;
+}
+.footerBS div div .redes2 {
+  width: 50px;
+  transition: 0.1s;
+}
+.footerBS div div .redes2:hover {
+  width: 60px;
 }

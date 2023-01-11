@@ -1,0 +1,31 @@
+@media (max-width: 576px) {
+    .bodyInicio {
+      grid-template-columns: 1fr;
+      grid-template-rows: 90px 1fr 250px;
+      grid-template-areas: "header" 
+                           "main"
+                           "footer";
+      .headerInicio{
+        grid-area: header;
+      }
+      .mainInicio{
+        .portada {
+            display: none;
+          }
+        .portada2 {
+            display:block;
+          }
+        grid-area: main;
+
+        .cajaTextoInicio{
+            .textoInicio {
+                font-size: 100px;
+                margin: 100px;
+              }
+        }
+      }
+      .footerInicio{
+        grid-area: footer;
+      }
+    }
+  }

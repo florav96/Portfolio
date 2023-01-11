@@ -1,0 +1,48 @@
+$bgnav: #63025c;
+
+.navbar {
+    background-color: $bgnav !important;
+    .nav-item{
+        &:hover{
+            background: $colorTres;
+        }
+        .nav-link {
+            color: $colorUno !important;
+            font-family: Montserrat !important;
+            font-weight: 100;
+            font-size: 20px;
+            margin-left: 20px;
+          }
+        .dropdown-menu {
+            background-color: $bgnav !important;
+            .dropdown-item {
+                color: $colorUno !important;
+                font-family: Montserrat !important;
+                font-weight: 100;
+                font-size: 20px;
+                margin: 10px 20px 10px 20px;
+                &:hover{
+                    background: $colorTres;
+                }
+              }
+          }
+    }
+    .imgFlorav {
+        width: 180px;
+      }
+  }
+  
+  
+  
+  
+ 
+  
+  
+  
+
+  
+  
+ 
+  
+ 
+  

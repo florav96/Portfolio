@@ -1,0 +1,67 @@
+.bodyInicio {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 54px 1fr 250px;
+    grid-template-areas: "header header header header"
+                         "main   main   main   main"
+                         "footer footer footer footer";
+
+    .headerInicio {
+        grid-area: header;
+    }
+
+    .mainInicio {
+        grid-area: main;
+
+        .portada {
+            width: 100%;
+            animation-name: mover6;
+            animation-duration: 1s;
+        }
+
+        .portada2 {
+            display: none;
+        }
+
+        .reel {
+            width: 100%;
+            transition: 0.3s;
+
+            &:hover {
+                transform: scale(1.02);
+                filter: sepia(100%);
+            }
+        }
+
+        .cajaTextoInicio {
+            width: 100%;
+
+            .textoInicio {
+                color: $colorDos;
+                font-family: Montserrat;
+                font-weight: 700;
+                font-size: 70px;
+                text-align: center;
+                margin: 200px;
+                font-family: Montserrat;
+            }
+        }
+    }
+    .footerInicio {
+        grid-area: footer;
+    }
+}
+
+
+@keyframes mover6 {
+    0% {
+        transform: translate(0, -10%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        opacity: 100%;
+    }
+}
+

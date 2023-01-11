@@ -1,0 +1,105 @@
+.bodySobreMi {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 54px 1fr 250px;
+    grid-template-areas: "header header header header" 
+                         "main   main   main   main"
+                         "footer footer footer footer";
+        .headerSobreMi { 
+            grid-area: header;
+        }
+        .mainSobreMi {
+            grid-area: main;
+              .cajaBio {
+                background-color: $colorCuatro;
+                width: 1500px;
+                padding: 100px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                margin: 0px auto;
+                animation-name: mover4;
+                animation-duration: 2s;
+                .fotoMia {
+                    width: 550px;
+                    border: solid 50px;
+                    border-color: $colorUno;
+                    object-fit: cover;
+                  }
+                .textoBio{
+                    margin-left: 50px;
+                    p{
+                        color: $colorDos;
+                        font-size: 25px;
+                        font-family: Montserrat;
+                        line-height: 40px;
+                        text-align: justify;
+                        margin-bottom: 20px;
+                    }
+                }
+              }
+              
+          }
+  }
+
+  
+  @keyframes mover4 {
+    0% {
+      transform: translate(-100%, 0);
+      opacity: 0;
+    }
+    5% {
+      transform: translate(-100%, 0);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0, 0);
+      opacity: 100%;
+    }
+  }
+
+
+  @media (max-width: 576px) {
+    .bodySobreMi {
+      grid-template-columns: 1fr;
+      grid-template-rows: 90px 1fr 250px;
+      grid-template-areas: "header" "main" "footer";
+      .mainSobreMi {
+        justify-content: center;
+        padding: 0;
+        .sobreMiTitulo {
+            margin-top: 40px;
+          }
+          .cajaBio {
+            width: 430px;
+            max-height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            .fotoMia {
+                width: 350px;
+                margin-top: 40px;
+              }
+            .textoBio{
+                 margin-left: 0px;
+                p{
+                    font-size: 15px;
+                    line-height: 30px;
+                }
+                .p1 {
+                    margin: 40px 40px 20px 40px;
+                  }
+                .p2 {
+                    margin: 0px 40px 20px 40px;
+                  }
+                .p3 {
+                    margin: 0px 40px 40px 40px;
+                  }
+              }
+          }
+      }
+    }
+    
+  }
