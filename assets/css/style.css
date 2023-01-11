@@ -125,12 +125,20 @@ body {
   }
   .bodyInicio .mainInicio .portada2 {
     display: block;
+    width: 100%;
+  }
+  .bodyInicio .mainInicio .reel {
+    width: 100%;
+  }
+  .bodyInicio .mainInicio .cajaTextoInicio {
+    width: 100%;
   }
   .bodyInicio .mainInicio .cajaTextoInicio .textoInicio {
-    font-size: 100px;
+    font-size: 40px;
     margin: 100px;
   }
   .bodyInicio .footerInicio {
+    width: 100%;
     grid-area: footer;
   }
 }
