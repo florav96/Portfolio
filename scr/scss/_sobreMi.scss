@@ -10,6 +10,9 @@
         }
         .mainSobreMi {
             grid-area: main;
+              .sobreMiTitulo{
+                @extend %titulos
+              }
               .cajaBio {
                 background-color: $colorCuatro;
                 width: 1500px;
@@ -19,7 +22,7 @@
                 justify-content: space-around;
                 margin: 0px auto;
                 animation-name: mover4;
-                animation-duration: 2s;
+                animation-duration: 1s;
                 .fotoMia {
                     width: 550px;
                     border: solid 50px;

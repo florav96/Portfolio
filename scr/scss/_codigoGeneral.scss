@@ -18,7 +18,7 @@ $colorDos: antiquewhite;
 $colorTres: #0A000A;
 $colorCuatro: #63025c;
 
-.titulosPrincipales{
+%titulos{
   font-family: Montserrat;
   font-weight: 700;
   font-size: 7vh;
@@ -27,4 +27,15 @@ $colorCuatro: #63025c;
   margin: 70px;
   animation-name: mover3;
   animation-duration: 1s;
+}
+
+@keyframes mover3 {
+  0% {
+    transform: translate(0, -50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 100%;
+  }
 }

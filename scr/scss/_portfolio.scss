@@ -4,17 +4,26 @@
     z-index: 1;
   }
   
+header{
+  .portfolioTitulo{
+    @extend %titulos
+  }
+}
 .mainPortfolio{
     animation-name: opacityMain;
     animation-duration: 2s;
-    .cajaSTPorfolio {
+    .cajaSTPortfolio {
         background-color: $colorUno;
-        color: $colorTres;
-        border: 10px solid $colorTres;
+        color: $colorCuatro;
+        margin: 30px;
+        animation-name: moverST;
+        animation-duration: 1s;
+       
         .STPorfolio {
             font-family: Montserrat;
             font-weight: 700;
             font-size: 50px;
+            text-align: center;
           }  
       }
       .zoomImg {
@@ -105,3 +114,19 @@
       opacity: 100%;
     }
   }
+
+  
+
+  @keyframes moverST {
+    10% {
+      transform: translate(-50%, 0%);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0, 0);
+      opacity: 100%;
+    }
+  }
+
+
+  

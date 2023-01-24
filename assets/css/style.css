@@ -13,7 +13,7 @@ body {
   background-color: #0A000A;
 }
 
-.titulosPrincipales {
+header .contactoTitulo, header .portfolioTitulo, header .serviciosTitulo, .bodySobreMi .mainSobreMi .sobreMiTitulo {
   font-family: Montserrat;
   font-weight: 700;
   font-size: 7vh;
@@ -24,6 +24,16 @@ body {
   animation-duration: 1s;
 }
 
+@keyframes mover3 {
+  0% {
+    transform: translate(0, -50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 100%;
+  }
+}
 .navbar {
   background-color: #63025c !important;
 }
@@ -82,10 +92,37 @@ body {
   transform: scale(1.02);
   filter: sepia(100%);
 }
-.bodyInicio .mainInicio .cajaTextoInicio {
-  width: 100%;
+.bodyInicio .mainInicio .cajaFotos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 200px;
 }
-.bodyInicio .mainInicio .cajaTextoInicio .textoInicio {
+.bodyInicio .mainInicio .cajaFotos .fotos {
+  position: relative;
+  width: 900px;
+  margin: 0px 10px 20px 10px;
+}
+.bodyInicio .mainInicio .cajaFotos .fotos .imgs {
+  width: 100%;
+  height: 100%;
+}
+.bodyInicio .mainInicio .cajaFotos .fotos .tituloFotos {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  font-size: 100px;
+  color: antiquewhite;
+  font-family: Montserrat;
+  font-weight: 800;
+  font-style: italic;
+  background-color: rgba(10, 0, 10, 0.2);
+  padding: 40px;
+  width: 100%;
+  text-align: center;
+}
+.bodyInicio .mainInicio .textoInicio {
   color: antiquewhite;
   font-family: Montserrat;
   font-weight: 700;
@@ -94,7 +131,8 @@ body {
   margin: 200px;
   font-family: Montserrat;
 }
-.bodyInicio .footerInicio {
+
+.footerInicio {
   grid-area: footer;
 }
 
@@ -130,12 +168,15 @@ body {
   .bodyInicio .mainInicio .reel {
     width: 100%;
   }
+  .bodyInicio .mainInicio .cajaFotos {
+    margin-bottom: 100px;
+  }
   .bodyInicio .mainInicio .cajaTextoInicio {
     width: 100%;
   }
   .bodyInicio .mainInicio .cajaTextoInicio .textoInicio {
     font-size: 40px;
-    margin: 100px;
+    margin: 80px;
   }
   .bodyInicio .footerInicio {
     width: 100%;
@@ -163,7 +204,7 @@ body {
   justify-content: space-around;
   margin: 0px auto;
   animation-name: mover4;
-  animation-duration: 2s;
+  animation-duration: 1s;
 }
 .bodySobreMi .mainSobreMi .cajaBio .fotoMia {
   width: 550px;
@@ -294,16 +335,6 @@ main div .tarjeta-2 {
     opacity: 100%;
   }
 }
-@keyframes mover3 {
-  0% {
-    transform: translate(0, -50%);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 100%;
-  }
-}
 .navPorfolio {
   position: sticky;
   top: 0;
@@ -314,15 +345,18 @@ main div .tarjeta-2 {
   animation-name: opacityMain;
   animation-duration: 2s;
 }
-.mainPortfolio .cajaSTPorfolio {
+.mainPortfolio .cajaSTPortfolio {
   background-color: #e1bef3;
-  color: #0A000A;
-  border: 10px solid #0A000A;
+  color: #63025c;
+  margin: 30px;
+  animation-name: moverST;
+  animation-duration: 1s;
 }
-.mainPortfolio .cajaSTPorfolio .STPorfolio {
+.mainPortfolio .cajaSTPortfolio .STPorfolio {
   font-family: Montserrat;
   font-weight: 700;
   font-size: 50px;
+  text-align: center;
 }
 .mainPortfolio .zoomImg {
   overflow: hidden;
@@ -395,6 +429,16 @@ main div .tarjeta-2 {
     opacity: 0;
   }
   100% {
+    opacity: 100%;
+  }
+}
+@keyframes moverST {
+  10% {
+    transform: translate(-50%, 0%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
     opacity: 100%;
   }
 }
